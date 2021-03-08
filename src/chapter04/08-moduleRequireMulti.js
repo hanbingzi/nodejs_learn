@@ -1,4 +1,4 @@
-const module07 = require("./07-module-exports-multi")
+const module07 = require("./07-moduleExportsMulti")
 
 let ret1 = module07.sum(1,2)
 let ret2 = module07.subtract(2,1)

@@ -36,7 +36,7 @@ node.js 应用由模块组成，采用 CommonJS 规范，通过全局方法 requ
 
 #### 导出单个
 > 代码
-* [01-exports-one.js](../src/chapter04/01-exports-one.js)
+* [01-exportsOne.js](../src/chapter04/01-exportsOne.js)
 * [02-require.js](../src/chapter04/02-require.js)
 
 1.导出sum函数
@@ -51,7 +51,7 @@ exports.sum = sum;
 ```
 2.导入`01-exports-one.js`模块，并使用
 ```javascript
-const module01 = require('./01-exports-one.js');
+const module01 = require('./01-exportsOne.js');
 
 let ret = module01.sum(12,13);
 
@@ -59,8 +59,8 @@ console.log(ret)
 ```
 #### 同时导出多个函数
 > 代码
-* [03-exports-multi.js](../src/chapter04/03-exports-multi.js)
-* [04-require-multi.js](../src/chapter04/04-require-multi.js)
+* [03-exportsMulti.js](../src/chapter04/03-exportsMulti.js)
+* [04-requireMulti.js](../src/chapter04/04-requireMulti.js)
 
 1.导出多个函数
 ```javascript
@@ -86,7 +86,7 @@ exports.divide = divide;
 ```
 2. 导入多个函数
 ```javascript
-const module03 = require('./03-exports-multi.js');
+const module03 = require('./03-exportsMulti.js');
 
 let ret1 = module03.sum(1,2)
 let ret2 = module03.subtract(2,1)
@@ -103,8 +103,8 @@ console.info(ret4);
 ### module-exports
 #### module导出单个
 > 代码
-* [05-module-exports.js](../src/chapter04/05-module-exports.js)
-* [06-module-require.js](../src/chapter04/06-module-require.js)
+* [05-moduleExports.js](../src/chapter04/05-moduleExports.js)
+* [06-moduleRequire.js](../src/chapter04/06-moduleRequire.js)
 
 1.导出单个
 ```javascript
@@ -116,20 +116,20 @@ module.exports = function(){
 ```
 2.调用导出的函数
 ```javascript
-let module05 = require('./05-module-exports');
+let module05 = require('./05-moduleExports');
 
 module05();
 ```
 
 #### module同时导出多个
 > 代码
-* [07-module-exports-multi.js](../src/chapter04/07-module-exports-multi.js)
-* [08-module-require-multi.js](../src/chapter04/08-module-require-multi.js)
+* [07-moduleExportsMulti.js](../src/chapter04/07-moduleExportsMulti.js)
+* [08-moduleRequireMulti.js](../src/chapter04/08-moduleRequireMulti.js)
 
 
 1.导出单个
 ```javascript
-const module07 = require("./07-module-exports-multi")
+const module07 = require("./07-moduleExportsMulti")
 
 let ret1 = module07.sum(1,2)
 let ret2 = module07.subtract(2,1)
@@ -145,7 +145,7 @@ console.info(ret4);
 ```
 2.调用导出的函数
 ```javascript
-const module07 = require("./07-module-exports-multi")
+const module07 = require("./07-moduleExportsMulti")
 
 let ret1 = module07.sum(1,2)
 let ret2 = module07.subtract(2,1)
@@ -164,7 +164,7 @@ console.info(ret4);
 > 代码
 
 * [09-data.json](../src/chapter04/09-data.json)
-* [10-file-require.js](../src/chapter04/10-file-require.js)
+* [10-fileRequire.js](../src/chapter04/10-fileRequire.js)
 1. 新建文件`09-data.json`，内容如下
 ```json
 {

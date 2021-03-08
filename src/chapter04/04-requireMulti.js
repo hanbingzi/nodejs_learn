@@ -1,4 +1,4 @@
-const module03 = require('./03-exports-multi.js');
+const module03 = require('./03-exportsMulti.js');
 
 let ret1 = module03.sum(1,2)
 let ret2 = module03.subtract(2,1)
